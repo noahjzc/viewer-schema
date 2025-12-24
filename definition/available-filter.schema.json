@@ -1,0 +1,45 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://available-filter.schema.json",
+  "title": "Available Field Schema",
+  "type": "object",
+  "properties": {
+    "field": {
+      "$ref": "../filter-field.schema.json",
+      "description": "The field object"
+    },
+    "component": {
+      "type": "string",
+      "description": "The component used for displaying field values"
+    },
+    "value": {
+      "$ref": "../filter-value.schema.json",
+      "description": "The field value object"
+    },
+    "operator": {
+      "$ref": "#/definitions/fieldOperator",
+      "description": "The field operator object"
+    }
+  },
+  "required": [
+    "field",
+    "component"
+  ],
+  "definitions": {
+    "fieldOperator": {
+      "type": "object",
+      "properties": {
+        "locale": {
+          "type": "object",
+          "description": "The locale of the field"
+        },
+        "supportedOperators": {
+          "type": "array",
+          "items": {
+            "$ref": "../operator.schema.json"
+          }
+        }
+      }
+    }
+  }
+}

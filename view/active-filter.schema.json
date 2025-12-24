@@ -1,0 +1,37 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://active-filter.schema.json",
+  "title": "Active Filter Schema",
+  "type": "object",
+  "properties": {
+    "type": {
+      "type": "string",
+      "description": "The type of filter"
+    },
+    "field": {
+      "$ref": "../filter-field.schema.json",
+      "description": "The field to filter"
+    },
+    "label": {
+      "type": "string",
+      "description": "The label of the filter"
+    },
+    "value": {
+      "$ref": "../filter-value.schema.json",
+      "description": "The value of the filter"
+    },
+    "operator": {
+      "$ref": "../filter-operator.schema.json",
+      "description": "The operator of the filter"
+    },
+    "conditionOptions": {
+      "type": "object",
+      "description": "The options for the condition"
+    }
+  },
+  "required": [
+    "type",
+    "field",
+    "label"
+  ]
+}

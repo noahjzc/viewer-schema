@@ -1,0 +1,68 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://viewer-definition.schema.json",
+  "title": "Viewer Definition Schema",
+  "type": "object",
+  "properties": {
+    "id": {
+      "type": "string",
+      "description": "A unique identifier for the viewer definition"
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the viewer definition"
+    },
+    "dataUrl": {
+      "type": "string",
+      "description": "The URL of the data source for the viewer definition"
+    },
+    "countUrl": {
+      "type": "string",
+      "description": "The URL of the count source for the viewer definition"
+    },
+    "checkable": {
+      "type": "boolean",
+      "description": "Whether the viewer definition is checkable"
+    },
+    "availableFilters": {
+      "type": "array",
+      "items": {
+        "$ref": "#/definitions/availableFilterGroup"
+      },
+      "description": "The available filters for the viewer definition"
+    },
+    "fields": {
+      "type": "array",
+      "items": {
+        "$ref": "field.schema.json"
+      },
+      "description": "The fields for the viewer definition"
+    }
+  },
+  "required": [
+    "id",
+    "name",
+    "dataUrl",
+    "countUrl",
+    "availableFilters",
+    "fields"
+  ],
+  "definitions": {
+    "availableFilterGroup": {
+      "type": "object",
+      "properties": {
+        "label": {
+          "type": "string",
+          "description": "The label for the available filter group"
+        },
+        "filters": {
+          "type": "array",
+          "items": {
+            "$ref": "available-filter.schema.json"
+          },
+          "description": "The available filters for the available filter group"
+        }
+      }
+    }
+  }
+}

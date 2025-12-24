@@ -1,0 +1,24 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://filter-value.schema.json",
+  "title": "Filter Value Schema",
+  "type": "object",
+  "properties": {
+    "defaultValue": {
+      "type": "object",
+      "description": "The default value of the field"
+    },
+    "placeholder": {
+      "type": "string",
+      "description": "The placeholder of the field"
+    },
+    "className": {
+      "type": "string",
+      "description": "The class name of the field"
+    },
+    "style": {
+      "type": "object",
+      "description": "The style of the field"
+    }
+  }
+}

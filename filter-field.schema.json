@@ -1,0 +1,23 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://filter-field.schema.json",
+  "title": "Filter Field Schema",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string",
+      "description": "The label of the field"
+    },
+    "type": {
+      "type": "string",
+      "description": "The type of the field"
+    },
+    "format": {
+      "type": "string",
+      "description": "The format of the field. Specifies the display format for the field value."
+    }
+  },
+  "required": [
+    "label"
+  ]
+}

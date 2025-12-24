@@ -1,0 +1,69 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://view.schema.json",
+  "title": "View Schema",
+  "type": "object",
+  "properties": {
+    "definitionId": {
+      "type": "string",
+      "description": "The id of the view definition"
+    },
+    "type": {
+      "$ref": "#/definitions/viewType",
+      "description": "The type of the view"
+    },
+    "source": {
+      "$ref": "#/definitions/viewSource",
+      "description": "The source of the view"
+    },
+    "columns": {
+      "type": "array",
+      "items": {
+        "$ref": "view-column.schema.json"
+      },
+      "description": "The columns of the view"
+    },
+    "filters": {
+      "type": "array",
+      "items": {
+        "$ref": "active-filter.schema.json"
+      },
+      "description": "The active filters of the view"
+    },
+    "tableSize": {
+      "$ref": "#/definitions/tableSizeEnum",
+      "description": "The size of the table"
+    },
+    "pageSize": {
+      "type": "integer",
+      "description": "The page size of the view",
+      "default": 20
+    },
+    "sort": {
+      "type": "integer",
+      "description": "The sort of the view"
+    }
+  },
+  "definitions": {
+    "viewType": {
+      "enum": [
+        "SHARED",
+        "PERSONAL"
+      ]
+    },
+    "viewSource": {
+      "enum": [
+        "SYSTEM",
+        "CUSTOM"
+      ]
+    },
+    "tableSizeEnum": {
+      "enum": [
+        "small",
+        "middle",
+        "large",
+        "undefined"
+      ]
+    }
+  }
+}

@@ -1,0 +1,46 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "https://field.schema.json",
+  "title": "Field Schema",
+  "type": "object",
+  "properties": {
+    "label": {
+      "type": "string",
+      "description": "The label for the field. It will show on the table header."
+    },
+    "name": {
+      "type": "string",
+      "description": "The name of the field."
+    },
+    "primaryKey": {
+      "type": "boolean",
+      "default": false,
+      "description": "If true, this field will be used as the primary key for the table."
+    },
+    "sorter": {
+      "description": "The sorter for the field.",
+      "$ref": "#/definitions/sorterType",
+      "default": null
+    },
+    "attributes": {
+      "type": "object",
+      "description": "The attributes for the field."
+    }
+  },
+  "required": [
+    "label",
+    "name",
+    "primaryKey"
+  ],
+  "definitions": {
+    "sorterType": {
+      "type": "object",
+      "properties": {
+        "multiple": {
+          "type": "integer",
+          "description": "The number of sorters index"
+        }
+      }
+    }
+  }
+}
