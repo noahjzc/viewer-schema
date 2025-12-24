@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://available-filter.schema.json",
+  "$id": "https://raw.githubusercontent.com/noahjzc/viewer-schema/refs/heads/main/definition/available-filter.schema.json",
   "title": "Available Field Schema",
   "type": "object",
   "properties": {

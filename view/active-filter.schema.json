@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://active-filter.schema.json",
+  "$id": "https://raw.githubusercontent.com/noahjzc/viewer-schema/refs/heads/main/view/active-filter.schema.json",
   "title": "Active Filter Schema",
   "type": "object",
   "properties": {

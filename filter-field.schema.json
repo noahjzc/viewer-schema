@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://filter-field.schema.json",
+  "$id": "https://raw.githubusercontent.com/noahjzc/viewer-schema/refs/heads/main/filter-field.schema.json",
   "title": "Filter Field Schema",
   "type": "object",
   "properties": {

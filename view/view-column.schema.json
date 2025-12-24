@@ -1,6 +1,6 @@
 {
   "$schema": "http://json-schema.org/draft-07/schema#",
-  "$id": "https://view-column.schema.json",
+  "$id": "https://raw.githubusercontent.com/noahjzc/viewer-schema/refs/heads/main/view/view-column.schema.json",
   "title": "View Column Schema",
   "type": "object",
   "properties": {
